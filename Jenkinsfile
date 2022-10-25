@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('deploy') {
             steps {
+              sh "aws configure set region $AWS_DEFAULT_REGION" 
 
               sh "aws s3 cp Public/index.html s3://jenkins-demo1"
             }
