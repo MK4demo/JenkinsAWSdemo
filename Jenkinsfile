@@ -6,7 +6,7 @@ pipeline {
             steps {
               sh "aws configure set region $AWS_DEFAULT_REGION" 
 
-              sh "aws s3 cp Public/index.html s3://jenkins-demo1"
+              sh "aws s3 cp public/index.html s3://jenkins-demo1"
             }
         }
     }
