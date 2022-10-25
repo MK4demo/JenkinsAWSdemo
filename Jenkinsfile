@@ -1,12 +1,16 @@
 pipeline {
     agent any
-
+pipeline {
+    agent any
     stages {
-        stage('deploy to S3'){
-          steps{
-              sh 'aws s3 cp public s3://jenkins-demo1 --recursive'
-              sh 'aws s3api put-object-acl --bucket jenkins-demo1 --key index.html --acl public-read'
-          }
-      }
+        stage('deploy') {
+            steps {
+              sh "aws configure set region $AWS_DEFAULT_REGION" 
+              sh "aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID"  
+              sh "aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY"
+              sh "aws s3 cp Public s3://jenkins-demo1 --recursive"
+            }
+        }
     }
+}
 }
