@@ -67,7 +67,7 @@ export class MainPage {
     }
 
     generateButton() {
-        return cy.get('#button')
+        return cy.get('button#button')
     }
 
     showPasswordButton() {

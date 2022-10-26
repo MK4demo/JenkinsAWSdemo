@@ -12,6 +12,6 @@ Feature: Password generator UI tests
             | length | digits | capitals | special |
             | 16     | 4      | 4        | 4       |
         And I click the generate button
-        #Then A password is generated
+        Then A password is generated
 # password with 16 chars etc.
 

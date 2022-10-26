@@ -1,7 +1,20 @@
 
 pipeline {
     agent any
+
+    tools {nodejs "Node19"}
+
+
     stages {
+
+       stage('Test') {
+           steps {
+                sh 'cd Cypress-ATF/src/test/javascript'
+                sh 'npm install'
+                sh 'npx cypress run'
+           }
+       }
+
         stage('deploy') {
             steps {
               sh 'aws configure set region $AWS_DEFAULT_REGION' 
@@ -12,3 +25,4 @@ pipeline {
         }
     }
 }
+
