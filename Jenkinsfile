@@ -7,8 +7,17 @@ pipeline {
 
     stages {
 
-       stage('Test') {
+        stage('Test') {
+
+            // Git committer email
+            LS = sh (
+                script: 'ls',
+                returnStdout: true
+            ).trim()
+            echo "ls: ${LS}"
+
            steps {
+                sh 'ls'
                 sh 'cd Cypress-ATF/src/test/javascript'
                 sh 'npm install'
                 sh 'npx cypress run'
