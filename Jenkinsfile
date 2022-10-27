@@ -12,10 +12,6 @@ pipeline {
                     sh 'npx cypress run'
                 }
             }
-            dir('Cypress-ATF/src/test/javascript') {
-                sh 'npm install'
-                sh 'npx cypress run'
-            }
         }
         stage('deploy') {
             steps {
