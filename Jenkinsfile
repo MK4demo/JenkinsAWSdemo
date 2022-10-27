@@ -6,7 +6,7 @@ pipeline {
     tools {nodejs "Node16"}
 
     stages {
-        stage('Test')
+        stage('Test') {
             dir('Cypress-ATF/src/test/javascript') {
                 sh 'npm install'
                 sh 'npx cypress run'
