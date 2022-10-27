@@ -12,6 +12,7 @@ pipeline {
                 sh 'npx cypress run'
             }
        }
+    }
 
     stage('deploy') {
         steps {
