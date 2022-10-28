@@ -28,6 +28,10 @@ export class MainPage {
         this.generateButton().click()
     }
 
+    clickShowPasswordButton() {
+        this.showPasswordButton().click()
+    }
+
     enterPasswordOptions(options) {
         options.hashes().forEach((option) => {
             this.enterPasswordLengthValue(option.length)
@@ -40,6 +44,7 @@ export class MainPage {
     // Assertions
 
     checkTitle() {
+        this.clickShowPasswordButton()
         cy.title().should('eq', 'Password Generator')
         return this
     }
