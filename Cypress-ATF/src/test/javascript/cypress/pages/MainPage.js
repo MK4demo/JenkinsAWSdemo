@@ -1,9 +1,10 @@
 /// <reference types="cypress" />
 
+import 'cypress-axe'
+
 export class MainPage {
 
     // Actions
-
     visitPage() {
         cy.visit('/')
     }
@@ -87,6 +88,15 @@ export class MainPage {
 
     passwordOutField() {
         return cy.get('#out')
+    }
+
+    // Accessability
+    setupAxe() {
+        cy.injectAxe()
+    }
+
+    checkA11y() {
+        cy.checkA11y()
     }
 
 }
