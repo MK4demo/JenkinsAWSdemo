@@ -9,19 +9,19 @@ export class MainPage {
     }
 
     enterPasswordLengthValue(value) {
-        this.passwordLengthField().type(value)
+        this.passwordLengthField().type(value).type('{enter}')
     }
 
     enterNumericDigitsValue(value) {
-        this.numericDigitsField().type(value)
+        this.numericDigitsField().type(value).type('{enter}')
     }
 
     enterCapitalLettersValue(value) {
-        this.capitalLettersField().type(value)
+        this.capitalLettersField().type(value).type('{enter}')
     }
 
     enterSpecialCharactersValue(value) {
-        this.specialCharactersField().type(value)
+        this.specialCharactersField().type(value).type('{enter}')
     }
 
     clickGenerateButton() {
@@ -41,20 +41,26 @@ export class MainPage {
         })
     }
 
-    // Assertions
+    closeAlert() {
+        cy.on('window:confirm', () => true)
+    }
 
+    // Assertions
     checkTitle() {
-        this.clickShowPasswordButton()
         cy.title().should('eq', 'Password Generator')
         return this
     }
 
     checkPasswordGenerated() {
-        this.passwordOutField().should('not.be.empty')
+        this.clickShowPasswordButton()
+        this.passwordOutField().invoke('val').should('not.be.empty')
+    }
+
+    numbersFieldIsReset() {
+        this.numericDigitsField().invoke('val').should('eq', '0')
     }
 
     // Components
-
     passwordLengthField() {
         return cy.get('#totallength')
     }
@@ -82,5 +88,5 @@ export class MainPage {
     passwordOutField() {
         return cy.get('#out')
     }
-    
+
 }
