@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'http-server -p 8080 &'
+                sh 'http-server -p 8081 &'
             }
         }
 
