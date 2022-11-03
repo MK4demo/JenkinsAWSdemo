@@ -5,6 +5,12 @@ pipeline {
 
     stages {
 
+        stage('Build') {
+            steps {
+                sh 'http-server'
+            }
+        }
+
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
@@ -13,7 +19,7 @@ pipeline {
                 }
             }
         }
-        stage('deploy') {
+        stage('Deploy') {
             steps {
                 sh 'aws configure set region $AWS_DEFAULT_REGION' 
                 sh 'aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID'  
