@@ -14,7 +14,6 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
-                    sh 'npm install'
                     sh 'npx cypress run'
                 }
             }
