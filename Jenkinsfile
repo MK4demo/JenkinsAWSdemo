@@ -14,8 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
-                    sh 'npm i'
-                    sh 'NO_COLOR=1 cypress run'
+                    sh 'npx cypress run'
                 }
             }
         }
