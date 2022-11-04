@@ -19,7 +19,7 @@ pipeline {
                     sh 'npx cypress run'
                 }
                  publishHTML([allowMissing: false, 
-                alwaysLinkToLastBuild: false, 
+                alwaysLinkToLastBuild: true, 
                 keepAll: false, 
                 reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results', 
                 reportFiles: 'mochawesome_November_4_2022_002.html', reportName: 'JenkinsAWS_report', 
