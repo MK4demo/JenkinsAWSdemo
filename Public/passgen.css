@@ -52,12 +52,12 @@ button {
 	margin: auto;
 	font-weight: 700;
 	padding: 1rem 3rem;
-	background-color: rgb(188, 157, 8);
+	background-color: rgb(188, 57, 8);
 	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.522);
 	border: none;
 	outline: none;
 	border-radius: 0.2rem;
-	color: rgb(188, 157, 8);
+	color: white;
 }
 #show-password {
 	padding: 1rem 2rem;
