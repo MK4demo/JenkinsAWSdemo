@@ -16,6 +16,7 @@
     "timestamp": "longDate",
     "reportDir": "/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results",
     "overwrite": "false",
-    "html": "false"
+    "html": "true",
+    "json": "false"
   }
 }
