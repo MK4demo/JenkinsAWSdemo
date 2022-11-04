@@ -18,21 +18,15 @@ pipeline {
                     sh 'npm install -g mochawesome-report-generator'
                     sh 'npx cypress run'
                 }
-            }
-        }
-
-        stage('Report') {
-            steps {
-                publishHTML([allowMissing: false, 
+                 publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: false, 
                 keepAll: false, 
                 reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results', 
-                reportFiles: '', reportName: 'JenkinsAWS_report', 
+                reportFiles: 'mochawesome_November_4_2022_002.html', reportName: 'JenkinsAWS_report', 
                 reportTitles: '', useWrapperFileDirectly: true])
             }
-
         }
-        
+
         stage('Deploy') {
             steps {
                 sh 'aws configure set region $AWS_DEFAULT_REGION' 
