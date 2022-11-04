@@ -22,7 +22,7 @@ pipeline {
                 alwaysLinkToLastBuild: true, 
                 keepAll: false, 
                 reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results', 
-                reportFiles: '', reportName: 'JenkinsAWS_report', 
+                reportFiles: 'mochawesome.html', reportName: 'JenkinsAWS_report', 
                 reportTitles: '', useWrapperFileDirectly: true])
             }
         }
