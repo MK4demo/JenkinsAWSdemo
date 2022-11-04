@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
+                    sh 'npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator'
                     sh 'npx cypress run'
                 }
             }
