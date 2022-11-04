@@ -20,6 +20,18 @@ pipeline {
                 }
             }
         }
+
+        stage('Report') {
+            steps {
+                publishHTML([allowMissing: false, 
+                alwaysLinkToLastBuild: false, 
+                keepAll: false, 
+                reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results', 
+                reportFiles: '', reportName: 'JenkinsAWS_report', 
+                reportTitles: '', useWrapperFileDirectly: true])
+            }
+
+        }
         
         stage('Deploy') {
             steps {
