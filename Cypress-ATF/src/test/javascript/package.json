@@ -32,7 +32,7 @@
     "cypress-cucumber-preprocessor": {
       "cucumberJson": {
         "generate": true,
-        "outputFolder": "/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/cucumber",
+        "outputFolder": "./var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/cucumber",
         "filePrefix": "",
         "fileSuffix": ".cucumber"
       }
