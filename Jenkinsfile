@@ -20,8 +20,8 @@ pipeline {
                  publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: true, 
                 keepAll: false, 
-                reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results/.jsons', 
-                reportFiles: '*.*', reportName: 'JenkinsAWS_report', 
+                reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results', 
+                reportFiles: 'mochawesome.html', reportName: 'JenkinsAWS_report', 
                 reportTitles: '', useWrapperFileDirectly: true])
             }
         }
