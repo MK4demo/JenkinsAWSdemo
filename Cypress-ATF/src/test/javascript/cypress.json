@@ -13,8 +13,7 @@
   "reporter": "cypress-mochawesome-reporter",
   "reporterOptions": {
     "reportDir": "/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results",
-    "overwrite": "true",
-    "html": "true",
-    "json": "true"
+    "charts": "true",
+    "embeddedScreenshots": "true",
   }
 }
