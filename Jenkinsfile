@@ -14,10 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
-                    sh 'npm install mocha cypress-multi-reporters mochawesome mochawesome-merge mochawesome-report-generator'
-                    sh 'npm install --save-dev mocha cypress-multi-reporters mochawesome'
                     sh 'npm install --save-dev cypress-mochawesome-reporter'
-                    sh 'npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator'
                     sh 'npx cypress run'
                 }
                  publishHTML([allowMissing: false, 
