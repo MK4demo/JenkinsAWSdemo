@@ -15,7 +15,6 @@
     "reportDir": "/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results",
     "reportPagetitle": "Jenkins AWS Demo",
     "charts": "true",
-    "embeddedScreenshots": "true",
     "overwrite": "true",
     "html": "true",
     "json": "true"
