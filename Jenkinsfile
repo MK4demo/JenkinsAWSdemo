@@ -14,7 +14,6 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
-                    sh 'npm install — save-dev cypress-cucumber-preprocessor'
                     sh 'npm install --save-dev cypress-mochawesome-reporter'
                     sh 'yarn run cypress open'
                     sh 'npx cypress run'
