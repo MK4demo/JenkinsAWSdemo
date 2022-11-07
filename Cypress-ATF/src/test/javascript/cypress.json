@@ -10,17 +10,11 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
-  "reporter": "cypress-multi-reporters",
+  "reporter": "cypress-mochawesome-reporter",
   "reporterOptions": {
-    "reporterEnabled": "mochawesome",
-    "mochawesomeReporterOptions": {
-      "reportDir": "cypress/reports/mocha",
-      "quite": true,
-      "overwrite": false,
-      "html": false,
-      "json": true,
-      "screenshotOnRunFailure": true,
-      "screenshotsFolder": "cypress/reports/mochareports/assets"
-    }
+    "reportDir": "/cypress/results",
+    "overwrite": "true",
+    "html": "true",
+    "json": "true"
   }
 }
