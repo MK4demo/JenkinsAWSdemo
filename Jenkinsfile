@@ -15,7 +15,6 @@ pipeline {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
                     sh 'npm install --save-dev cypress-mochawesome-reporter'
-                    sh 'npm run cypress open'
                     sh 'npx cypress run'
                 }
                  publishHTML([allowMissing: false, 
