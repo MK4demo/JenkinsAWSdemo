@@ -14,6 +14,6 @@
   "reporterOptions": {
     "reportDir": "/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results",
     "charts": "true",
-    "embeddedScreenshots": "true",
+    "embeddedScreenshots": "true"
   }
 }
