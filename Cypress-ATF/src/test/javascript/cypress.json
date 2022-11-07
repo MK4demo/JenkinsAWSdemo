@@ -1,13 +1,14 @@
 {
-    "testFiles": "**/*.feature",
-    "chromeWebSecurity": false,
-    "modifyObstructiveCode": false,
-    "defaultCommandTimeout": 60000,
-    "env": {
-      "device": "default"
-    },
-    "baseUrl": "http://jenkins-demo1.s3-website-eu-west-1.amazonaws.com/",
-    "cypress-cucumber-preprocessor": {
-      "nonGlobalStepDefinitions": true
-    }
-  }
+	"testFiles": "**/*.feature",
+	"chromeWebSecurity": false,
+	"modifyObstructiveCode": false,
+	"defaultCommandTimeout": 60000,
+	"env": {
+		"device": "default"
+	},
+	"baseUrl": "http://jenkins-demo1.s3-website-eu-west-1.amazonaws.com/",
+	"cypress-cucumber-preprocessor": {
+		"nonGlobalStepDefinitions": true
+	},
+	"reporter": "cypress-serenity-reporter"
+}
