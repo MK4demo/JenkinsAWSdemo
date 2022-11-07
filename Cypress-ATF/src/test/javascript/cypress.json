@@ -16,8 +16,7 @@
     "reportPagetitle": "Jenkins AWS Demo",
     "charts": "true",
     "embeddedScreenshots": "true",
-    "overwrite": "true",
-    "html": "false",
+    "html": "true",
     "json": "true"
   }
 }
