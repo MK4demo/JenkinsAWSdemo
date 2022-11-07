@@ -23,7 +23,7 @@ pipeline {
                  publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: true, 
                 keepAll: false, 
-                reportDir: '/results', 
+                reportDir: '/cypress/results', 
                 reportFiles: 'mochawesome.html', reportName: 'JenkinsAWS_report', 
                 reportTitles: '', useWrapperFileDirectly: true])
             }
