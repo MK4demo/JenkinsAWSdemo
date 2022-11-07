@@ -16,7 +16,7 @@ pipeline {
                 dir('Cypress-ATF/src/test/javascript') {
                     sh 'npm install --save-dev cypress-mochawesome-reporter'
                     sh 'npx cypress run'
-                    sh 'marge cypress/results/mochawesome.json'
+                    sh 'marge cypress/results/.jsons/*.json'
                 }
                  publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: true, 
