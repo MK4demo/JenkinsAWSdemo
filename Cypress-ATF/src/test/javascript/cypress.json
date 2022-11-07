@@ -10,10 +10,12 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
-  "reporter": "mochawesome-report-generator",
+  "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results",
     "charts": "true",
-    "embeddedScreenshots": "true"
+    "embeddedScreenshots": "true",
+    "html": "true",
+    "json": "true"
   }
 }
