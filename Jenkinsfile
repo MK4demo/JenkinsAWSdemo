@@ -14,16 +14,16 @@ pipeline {
         stage('Test') {
             steps {
                 dir('Cypress-ATF/src/test/javascript') {
+                    sh 'npm install mocha cypress-multi-reporters mochawesome mochawesome-merge mochawesome-report-generator'
                     sh 'npm install --save-dev mocha cypress-multi-reporters mochawesome'
                     sh 'npm install --save-dev cypress-mochawesome-reporter'
                     sh 'npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator'
-                    sh 'npm install -g mochawesome-report-generator'
                     sh 'npx cypress run'
                 }
                  publishHTML([allowMissing: false, 
                 alwaysLinkToLastBuild: true, 
                 keepAll: false, 
-                reportDir: '/var/lib/jenkins/workspace/JenkinsAWSdemoPIPELINE_main/Cypress-ATF/src/test/javascript/cypress/results', 
+                reportDir: '/results', 
                 reportFiles: 'mochawesome.html', reportName: 'JenkinsAWS_report', 
                 reportTitles: '', useWrapperFileDirectly: true])
             }
