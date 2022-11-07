@@ -28,7 +28,15 @@
     "cypress-mochawesome-reporter": "3.2.3"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": true,
+    "cypress-cucumber-preprocessor": {
+      "cucumberJson": {
+        "generate": true,
+        "outputFolder": "cypress/cucumber-json",
+        "filePrefix": "",
+        "fileSuffix": ".cucumber"
+      }
+    }
   },
   "dependencies": {
     "axe-core": "^4.5.1",
