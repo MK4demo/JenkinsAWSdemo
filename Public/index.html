@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,42 @@
     <script src="password-generator.js"></script>
     <link rel="stylesheet" href="./passgen.css">
 </head>
+
 <body>
+    <div class="container">
+        <h1>Password Generator</h1>
+    </div>
     <form id="input-wrapper">
         <label>
             Password length:
-            <input placeholder="Number required" aria-label="total-length-input" type="number" min="0" max="100" id='totallength'/>
+            <input placeholder="Number required" aria-label="total-length-input" type="number" min="0" max="100"
+                id='totallength' />
         </label>
         <label>
             Numeric digits:
-            <input placeholder="Number required" aria-label="number-of-numeric-password-characters" type="number" min="0" max="100" id='numbers'/>
+            <input placeholder="Number required" aria-label="number-of-numeric-password-characters" type="number"
+                min="0" max="100" id='numbers' />
         </label>
         <label>
             Capital letters:
-            <input placeholder="Number required" aria-label="number-of-capital-english-letters" type="number" min="0" max="100" id='caps'/>
+            <input placeholder="Number required" aria-label="number-of-capital-english-letters" type="number" min="0"
+                max="100" id='caps' />
         </label>
         <label>
             Other characters:
-            <input placeholder="Number required" aria-label="number-of-non-alpha-numeric-characters" type="number" min="0" max="100" id='non-an-chars'/>
+            <input placeholder="Number required" aria-label="number-of-non-alpha-numeric-characters" type="number"
+                min="0" max="100" id='non-an-chars' />
         </label>
         <div id='footer'>
             <button type="submit" id="button">GENERATE</button>
-            <input disabled aria-label="output-field-with-password" type='password' id='out'/>
+            <input disabled aria-label="output-field-with-password" type='password' id='out' />
             <span class="row-flex">
-                <button class="low-ceiling" id="show-password" aria-label="show-password" type="button">SHOW PASSWORD</button>
+                <button class="low-ceiling" id="show-password" aria-label="show-password" type="button">SHOW
+                    PASSWORD</button>
                 <button class="low-ceiling" id="copy-password" aria-label="copy-password" type="button">COPY 📋</button>
             </span>
         </div>
     </form>
 </body>
+
 </html>
