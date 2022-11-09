@@ -77,7 +77,7 @@ const generatePassword = (e, l = state.l, n = state.n, x = state.x, c = state.c)
         if (l <= 0 || n < 0 || x < 0 || c < 0) {
             return alert('Looks like you may have failed to enter a password length or you may have used a negative number.')
         } else
-            if ((n + x + c) > l) {
+            if ((n + x + c) < l) {
                 return alert('Requested characters exceed given password length')
             }
     const numbers = getNumbers(n)
