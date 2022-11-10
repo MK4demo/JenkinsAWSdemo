@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
 
-h1 {
-	text-align: center;
-}
-
 body {
 	height: 100vh;
 	width: 100vw;
@@ -15,6 +11,27 @@ body {
 	margin: 0px;
 	background-color: rgba(103, 162, 157, 0.523);
 	font-family: 'Ubuntu';
+}
+
+.container {
+	display: flex;
+	align-self: center;
+}
+
+h1 {
+	font-size: 48px;
+	text-shadow: -1px -1px #eee, 1px 1px #888, -3px 0 4px #000;
+	font-family: 'Segoe print', Arial, Helvetica, sans-serif;
+	color: rgb(8, 27, 146);
+	padding: 16px;
+	font-weight: lighter;
+	-moz-box-shadow: 2px 2px 6px #888;
+	-webkit-box-shadow: 2px 2px 6px #888;
+	box-shadow: 2px 2px 6px #888;
+	text-align: center;
+	display: inline;
+	line-height: 92px;
+	background-color: rgba(255, 255, 255, 0);
 }
 
 input {
